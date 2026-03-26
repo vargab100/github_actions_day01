@@ -9,9 +9,20 @@ on:
 jobs:
   hello:
     runs-on: ubuntu-latest
+
+    env:
+      MY_SECRET: ${{ secrets.MY_SECRET }}
+      MY_VAR: ${{ vars.MY_VAR }}
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Print Hello World
         run: echo "Hello World"
+
+      - name: Print Variable
+        run: echo "Variable value is $MY_VAR"
+
+      - name: Print Secret
+        run: echo "Secret value is $MY_SECRET"
