@@ -17,7 +17,7 @@ jobs:
       # Install Databricks CLI
       - name: Install Databricks CLI
         run: |
-          curl -fsSL https://github.com/databricks/cli/releases/latest/download/databricks_linux_amd64 -o databricks
+          pip install databricks-cli
           sudo install -o root -g root -m 0755 databricks /usr/local/bin/databricks
           databricks version
 
