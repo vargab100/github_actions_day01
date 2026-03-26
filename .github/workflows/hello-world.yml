@@ -11,8 +11,8 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      MY_SECRET: ${{ secrets.MY_SECRET }}
-      MY_VAR: ${{ vars.MY_VAR }}
+      MY_SECRET: ${{ secrets.APP_ID }}
+      MY_VAR: ${{ vars.APP_ID }}
 
     steps:
       - name: Checkout code
