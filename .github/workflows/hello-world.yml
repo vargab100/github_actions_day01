@@ -12,7 +12,7 @@ jobs:
 
     env:
       MY_SECRET: ${{ secrets.APP_ID }}
-      MY_VAR: ${{ vars.APP_ID }}
+      MY_VAR: ${{ vars.APP_ID_VAR }}
 
     steps:
       - name: Checkout code
