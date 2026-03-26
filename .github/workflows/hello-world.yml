@@ -10,9 +10,9 @@ jobs:
   hello:
     runs-on: ubuntu-latest
 
-    env:
-      MY_SECRET: ${{ secrets.APP_ID }}
-      MY_VAR: ${{ vars.APP_ID_VAR }}
+    # env:
+    #   MY_SECRET: ${{ secrets.APP_ID }}
+    #   MY_VAR: ${{ vars.APP_ID_VAR }}
 
     steps:
       - name: Checkout code
@@ -22,7 +22,7 @@ jobs:
         run: echo "Hello World"
 
       - name: Print Variable
-        run: echo "Variable value is $MY_VAR"
+        run: echo "Variable value is ${{ vars.APP_ID_VAR }}"
 
       - name: Print Secret
-        run: echo "Secret value is $MY_SECRET"
+        run: echo "Secret value is ${{ secrets.APP_ID }}"
